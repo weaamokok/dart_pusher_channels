@@ -24,9 +24,10 @@ typedef _ShellAuthDelegateDataGenerator<T extends EndpointAuthorizationData> = T
 
 const _defaultChannelName = 'hi_channel';
 
-_ChannelMockDelegate _channelMockDelegate = (manager) =>
-    manager.publicChannel(_defaultChannelName, forceCreateNewInstance: false,
-                         );
+_ChannelMockDelegate _channelMockDelegate = (manager) => manager.publicChannel(
+      _defaultChannelName,
+      forceCreateNewInstance: false,
+    );
 
 class _ShellAuthDelegate<T extends EndpointAuthorizationData>
     implements EndpointAuthorizableChannelAuthorizationDelegate<T> {
